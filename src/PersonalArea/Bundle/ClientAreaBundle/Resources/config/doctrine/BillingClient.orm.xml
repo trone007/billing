@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PersonalArea\Bundle\ClientAreaBundle\Entity\BillingClient" table="billing.client">
+    <unique-constraints>
+      <unique-constraint name="unq_client_name" columns="name"/>
+      <unique-constraint name="unq_client_inn" columns="inn"/>
+    </unique-constraints>
+    <id name="id" type="integer" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="inn" type="string" column="inn" length="14" nullable="false"/>
+    <field name="name" type="text" column="name" nullable="false"/>
+  </entity>
+</doctrine-mapping>

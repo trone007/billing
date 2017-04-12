@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PersonalArea\Bundle\ClientAreaBundle\Entity\BillingBill" table="billing.bill">
+    <indexes>
+      <index name="idx_bill_client" columns="client_id"/>
+      <index name="idx_bill_service" columns="service_id"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="SEQUENCE"/>
+      <sequence-generator sequence-name="billing.bill_id_seq" allocation-size="1" initial-value="1"/>
+    </id>
+    <field name="dateTime" type="datetime" column="date_time" nullable="false">
+      <options>
+        <option name="comment">Дата и время начисления</option>
+      </options>
+    </field>
+    <field name="amount" type="decimal" column="amount" precision="10" scale="0" nullable="false">
+      <options>
+        <option name="comment">Сумма</option>
+      </options>
+    </field>
+    <field name="isInvoiceLoaded" type="boolean" column="is_invoice_loaded" nullable="true">
+      <options>
+        <option name="default"/>
+      </options>
+    </field>
+    <many-to-one field="service" target-entity="BillingService" fetch="LAZY">
+      <join-columns>
+        <join-column name="service_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="client" target-entity="BillingClient" fetch="LAZY">
+      <join-columns>
+        <join-column name="client_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

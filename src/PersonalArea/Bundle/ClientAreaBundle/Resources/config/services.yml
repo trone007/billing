@@ -1,0 +1,8 @@
+parameters:
+#    client_area.example.class: PersonalArea\Bundle\ClientAreaBundle\Example
+
+services:
+    preexecute.listener:
+        class: PersonalArea\Bundle\ClientAreaBundle\Listener\ControllerListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }

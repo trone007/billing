@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="" >
+        <body>
+           <trans-unit id="1">
+                <source>Billing Service List</source>
+                <target>Список услуг</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>Billing Price List</source>
+                <target>Ценовой план</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>Billing Client List</source>
+                <target>Клиенты</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Billing Client Discount List</source>
+                <target>Скидочный план клиентов</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Billing Client Price List</source>
+                <target>Ценовой план клиентов</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Billing Discount List</source>
+                <target>Скидки</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Billing Service Price List</source>
+                <target>Стоимость услуг</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Billing Accrual List</source>
+                <target>Оплаты</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>user_block_profile</source>
+                <target>Редактировать</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

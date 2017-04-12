@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PersonalArea\Bundle\ClientAreaBundle\Entity\BillingServicePrice" table="billing.service_price">
+    <indexes>
+      <index name="idx_service_price_price" columns="price_id"/>
+      <index name="idx_service_price_service" columns="service_id"/>
+    </indexes>
+    <unique-constraints>
+      <unique-constraint name="unq_service_price_service_price_count" columns="service_id,price_id,count"/>
+    </unique-constraints>
+    <id name="id" type="integer" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="count" type="smallint" column="count" nullable="false"/>
+    <field name="amount" type="decimal" column="amount" precision="10" scale="0" nullable="false"/>
+    <many-to-one field="price" target-entity="BillingPrice">
+      <join-columns>
+        <join-column name="price_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="service" target-entity="BillingService">
+      <join-columns>
+        <join-column name="service_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,169 @@
+reporting_homepage_alias:
+    path:     /
+    defaults: { _controller: ClientAreaBundle:auth:index }
+
+reporting_homepage:
+    path:     /index
+    defaults: { _controller: ClientAreaBundle:auth:index }
+
+logout:
+    path:     /logout
+    defaults: { _controller: ClientAreaBundle:auth:logout }
+
+authenticate:
+    path:     /load
+    defaults: { _controller: ClientAreaBundle:auth:authenticate }
+
+check_inn:
+    path:     /check-inn
+    defaults: { _controller: ClientAreaBundle:auth:checkInn }
+
+validate_container:
+    path:     /validate-cont
+    defaults: { _controller: ClientAreaBundle:auth:validateContainer }
+
+validate_cloud:
+    path:     /validate-cloud
+    defaults: { _controller: ClientAreaBundle:auth:cloudValidation }
+
+reporting:
+    path:     /reporting
+    defaults: { _controller: ClientAreaBundle:reporting:index }
+
+news:
+    path:     /news
+    defaults: { _controller: ClientAreaBundle:news:index, page: 1 }
+
+news_page:
+    path:     /news/{page}
+    defaults: { _controller: ClientAreaBundle:news:index }
+
+print_invoice_main:
+    path:     /print/invoice/{number}
+    defaults: { _controller: ClientAreaBundle:profile:printInvoice }
+
+current_news:
+    path:     /news/current/{id}
+    defaults: { _controller: ClientAreaBundle:news:currentNews }
+
+document_list:
+    path:     /documents
+    defaults: { _controller: ClientAreaBundle:profile:documentList }
+
+reglament_print:
+    path:     /reglament/{sys_name}
+    defaults: { _controller: ClientAreaBundle:profile:reglamentPrint }
+
+profile:
+    path:     /profile
+    defaults: { _controller: ClientAreaBundle:profile:profile }
+
+adv_index:
+    path:     /advertisement/menu
+    defaults: { _controller: ClientAreaBundle:Advertisement:menu }
+
+create:
+    path:     /advertisement/create
+    defaults: { _controller: ClientAreaBundle:Advertisement:advertisement, id:0 }
+
+adv_archive:
+    path:     /advertisement/archive
+    defaults: { _controller: ClientAreaBundle:Advertisement:archive }
+
+upload_image:
+    path:     /upload-image
+    defaults: { _controller: ClientAreaBundle:Advertisement:uploadImage }
+
+get_tariff_sum:
+    path:     /get-adv-tariff-sum
+    defaults: { _controller: ClientAreaBundle:Advertisement:getTariffSum }
+
+pay:
+    path:     /pay
+    defaults: { _controller: ClientAreaBundle:Advertisement:pay }
+
+statistic:
+    path:     /statistic
+    defaults: { _controller: ClientAreaBundle:Advertisement:statistic }
+
+validate:
+    path:     /advertisement/validate
+    defaults: { _controller: ClientAreaBundle:Advertisement:validate }
+
+click:
+    path:     /advertisement/click/{id}
+    defaults: { _controller: ClientAreaBundle:Advertisement:click }
+
+advertisement:
+    path:     /advertisement
+    defaults: { _controller: ClientAreaBundle:Advertisement:advertisement }
+
+upload_file:
+    path:     /uploadFile
+    defaults: { _controller: ClientAreaBundle:Advertisement:uploadFile }
+
+profile_information:
+    path:     /profileInformation
+    defaults: { _controller: ClientAreaBundle:Profile:profileInformation }
+
+requisites:
+    path:     /requisites
+    defaults: { _controller: ClientAreaBundle:profile:requisites }
+
+calc_tariff:
+    path:     /calc-tariff
+    defaults: { _controller: ClientAreaBundle:profile:calcTariff }
+
+get_packet:
+    path:     /get-packet/{packGroup}
+    defaults: { _controller: ClientAreaBundle:profile:getPackets }
+
+get_packet_forms:
+    path:     /get-packet-forms/{pack}
+    defaults: { _controller: ClientAreaBundle:profile:getPacketForms }
+
+get_not_packet_forms:
+    path:     /get-not-packet-forms/{pack}
+    defaults: { _controller: ClientAreaBundle:profile:getNotPacketForms }
+
+save_tariff:
+    path:     /save-tariff
+    defaults: { _controller: ClientAreaBundle:profile:saveTariff }
+
+prepare_to_reserve:
+    path:     /prepare-to-reserve
+    defaults: { _controller: ClientAreaBundle:profile:prepareToReserve }
+
+turn_autoreserve:
+    path:     /turn-autoreserve
+    defaults: { _controller: ClientAreaBundle:profile:turnAutoreserve }
+
+_soap_server_billing:
+    path:     /billing
+    defaults: { _controller: ClientAreaBundle:SoapController:BillingServer }
+
+_soap_server_statistic:
+    path:     /statistic-service
+    defaults: { _controller: ClientAreaBundle:SoapController:StatiscticServer }
+
+billing_client:
+    path:     /bill-client
+    defaults: { _controller: ClientAreaBundle:SoapController:SoapClient }
+
+withdrawal_balance:
+    path:     /withdrawal-balance
+    defaults: { _controller: ClientAreaBundle:SoapController:withdrawal }
+
+create_invoice:
+    path:     /create-invoice
+    defaults: { _controller: ClientAreaBundle:SoapController:createInvoices }
+
+change_roles:
+    path:     /change-role
+    defaults: { _controller: ClientAreaBundle:profile:changeRoles }
+
+agree_with_req:
+    path:     /agree-req
+    defaults: { _controller: ClientAreaBundle:profile:agreeWithRequisites }
+
+

@@ -1,0 +1,72 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="billing.service.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingServiceAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Услуги" label="Услуги"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingService</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="billing.price.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingPriceAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Ценовой план" label="Ценовой план"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingPrice</argument>
+            <argument>ClientAreaBundle:Default</argument>
+        </service>
+        <service id="billing.service.price.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingServicePriceAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Ценовой план" label="Стоимость услуг"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingServicePrice</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="billing.accrual.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingAccrualAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Биллинг" label="Поступления"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingAccrual</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="billing.balancestorage.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingBalanceStorageAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Биллинг" label="Баланс"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingBalanceStorage</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="billing.bill.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingBillAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Биллинг" label="Платежи"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingBill</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="billing.discount.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingDiscountAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Скидки" label="Скидочные планы"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingDiscount</argument>
+            <argument>ClientAreaBundle:Default</argument>
+        </service>
+        <service id="billing.client.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingClientAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Клиенты" label="Клиенты"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingClient</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="billing.client.discount.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingClientDiscountAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Клиенты" label="Скидочный план клиента"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingClientDiscount</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="billing.client.price.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingClientPriceAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Клиенты" label="Ценовой план клиента"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingClientPrice</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="billing.service.discount.admin" class="PersonalArea\Bundle\ClientAreaBundle\Admin\BillingServiceDiscountAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Скидки" label="Стоимость услуг"/>
+            <argument/>
+            <argument>PersonalArea\Bundle\ClientAreaBundle\Entity\BillingServiceDiscount</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+    </services>
+</container>

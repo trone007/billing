@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PersonalArea\Bundle\ClientAreaBundle\Entity\BillingSubscriber" table="billing.subscriber">
+    <unique-constraints>
+      <unique-constraint name="unq_subscriber_token" columns="token"/>
+      <unique-constraint name="unq_subscriber_name" columns="name"/>
+    </unique-constraints>
+    <id name="id" type="integer" column="id">
+      <generator strategy="SEQUENCE"/>
+    </id>
+    <field name="name" type="text" column="name" nullable="false"/>
+    <field name="token" type="blob" column="token" nullable="false"/>
+  </entity>
+</doctrine-mapping>
